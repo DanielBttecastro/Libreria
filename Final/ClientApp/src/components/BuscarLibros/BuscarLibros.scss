@@ -1,0 +1,67 @@
+$ColorPrincipal: #1f333b;
+ 
+body {
+    background-color: $ColorPrincipal;
+    font-size: 22px;
+  }
+  
+  // Estilos comunes para .item-custom-True y .item-custom-false
+  .item-custom {
+    background-color: white;
+    padding: 40px;
+    margin: 50px; 
+    border-radius: 20px;
+    height: auto;
+    width: auto;
+    transition: all 0.3s ease; // Agregamos transición para suavizar el cambio
+    cursor: pointer;
+    &:hover {
+      transform: scale(1.05); // Expandimos el elemento un poco
+    }
+  }
+  
+  // Estilos específicos para .item-custom-True
+  .item-custom-True {
+    @extend .item-custom; // Extender los estilos comunes
+    border: 1px solid green;
+    box-shadow: 0px 0px 36px -6px rgba(46, 194, 51, 1);
+  
+    &:hover {
+      box-shadow: inset 0px 0px 36px -6px rgba(46, 194, 51, 1);
+    }
+  }
+  
+  // Estilos específicos para .item-custom-false
+  .item-custom-false {
+    @extend .item-custom; // Extender los estilos comunes
+    border: 1px solid red;
+    box-shadow: 0px 0px 36px -6px red;
+  
+    &:hover {
+      box-shadow: inset 0px 0px 36px -6px red;
+    }
+  }
+  
+  // Estilos para .sup-custom
+  .sup-custom { position: absolute;
+    left: 0%;
+    display: flex;
+    flex-wrap: wrap; // Permite que los elementos se envuelvan a la siguiente línea
+    max-height: 80vh; // Altura máxima del contenedor, ajusta según sea necesario
+    overflow-y: auto; // Agrega una barra de desplazamiento vertical si es necesario 
+  }
+
+  // Additional styles for smaller screens
+@media (max-width: 576px) {
+  .sup-custom {
+    max-height: none; // Remove max-height on smaller screens
+  }
+}
+
+// Additional styles for larger screens
+@media (max-width: 375px) {
+  .item-custom {
+    width: 80%; // Two items per row on larger screens
+    margin-top: 30px;
+  }
+}

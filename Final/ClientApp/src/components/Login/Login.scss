@@ -1,0 +1,39 @@
+$ColorPrincipal: #1f333b;
+
+.login {
+    background-color: white;
+    border-radius: 40px;
+    width: 28%;
+    top: 22%;
+    position: absolute;
+    left: 36%;
+    box-shadow: inset 0px 0px 39px -17px $ColorPrincipal;
+}
+body {
+    background-color: $ColorPrincipal; 
+}
+ 
+.input-custom {
+    height: 45px;
+    font-size: 22px;
+    border: 2px solid $ColorPrincipal;
+    &:hover {
+        border-color: $ColorPrincipal;
+    }
+
+    &:focus {
+        border-color: $ColorPrincipal;
+    }
+}
+
+.btn-custom {
+    background-color: $ColorPrincipal; /* Reemplaza este color con el que desees */
+    color: white; /* Color del texto */
+    font-size: 22px;
+    font-weight: bold;
+    /* Otros estilos personalizados según sea necesario */
+    &:hover {
+        color: $ColorPrincipal; /* Color del texto */
+        border-color: $ColorPrincipal;
+    }
+}
